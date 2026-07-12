@@ -10,3 +10,10 @@ dist/
 # local build artifacts
 .flatpak-builder/
 repo/
+
+# local flatpak build outputs
+builddir/
+repo/
+.flatpak-builder/
+*.flatpak
+docs/screenshots/*.mirror

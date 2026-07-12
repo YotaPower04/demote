@@ -11,7 +11,9 @@ sdk: org.kde.Sdk
 command: demote
 
 finish-args:
+  - --require-version=1.16.0         # Flathub hardened --device=input in 1.16 (Deck has 1.16.6)
   - --share=network                 # LAN discovery + device control + DLNA server
+  - --share=ipc                     # required alongside X11 (shared memory)
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
@@ -49,12 +51,8 @@ modules:
       - install -Dm644 packaging/icon.svg
         ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/io.github.yotapower04.Demote.svg
     sources:
-      # Local build: clone the committed working tree (tracked files only, so no
-      # .venv / caches). For the Flathub PR, replace with the published tag:
-      #   - type: git
-      #     url: https://github.com/YotaPower04/demote.git
-      #     tag: v1.0.0
-      #     commit: <sha>
+      # Dev/local builds track main. The Flathub submission manifest pins this to
+      # a released tag + commit (Flathub requires a pinned commit).
       - type: git
-        path: ..
+        url: https://github.com/YotaPower04/demote.git
         branch: main
