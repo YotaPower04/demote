@@ -32,7 +32,7 @@ KEYMAP = {
     logical.CHUP: (8, 1), logical.CHDOWN: (8, 0), logical.CH_LIST: (8, 2),
     logical.SOURCE: (7, 1),                    # cycle input
     logical.UP: (3, 8), logical.DOWN: (3, 0), logical.LEFT: (3, 1),
-    logical.RIGHT: (3, 7), logical.OK: (3, 3),
+    logical.RIGHT: (3, 7), logical.OK: (3, 2),
     logical.BACK: (4, 0), logical.HOME: (4, 3), logical.MENU: (4, 8), logical.INFO: (4, 6),
     logical.EXIT: (9, 0),
     logical.PLAY: (2, 3), logical.PAUSE: (2, 4), logical.REWIND: (2, 1), logical.FF: (2, 0),
