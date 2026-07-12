@@ -9,9 +9,9 @@ device) it shows the setup wizard to discover and pair one.
 
 Flags:
   --fullscreen / --deck   force the big-touch landscape layout, fullscreen
-  --windowed              force the portrait windowed layout
+  --portrait              force the windowed portrait layout (old desktop mode)
 By default it auto-detects: fullscreen landscape on the Steam Deck (or any small
-landscape screen), windowed portrait on a desktop.
+landscape screen), windowed landscape on desktop.
 """
 from __future__ import annotations
 
@@ -32,16 +32,13 @@ from tvremote.volumekeys import VolumeKeyGrabber
 
 def decide_mode(app, argv):
     """Return (landscape, fullscreen)."""
-    if "--windowed" in argv:
+    if "--portrait" in argv:
         return False, False
     if "--fullscreen" in argv or "--deck" in argv:
         return True, True
     if os.environ.get("SteamDeck") or os.environ.get("SteamGamepadUI"):
         return True, True
-    geo = app.primaryScreen().availableGeometry()
-    if geo.height() <= 900 and geo.width() >= geo.height():
-        return True, True
-    return False, False
+    return True, False  # default: landscape windowed
 
 
 def main():
@@ -80,7 +77,8 @@ def main():
     if fullscreen:
         window.showFullScreen()
     else:
-        window.resize(470, 900)
+        size = (1200, 680) if landscape else (470, 900)
+        window.resize(*size)
         window.show()
 
     controller.start()
