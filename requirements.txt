@@ -1,0 +1,9 @@
+PySide6==6.11.1
+websockets>=13,<17
+androidtvremote2>=0.2,<1   # Android TV / Google TV driver (protocol v2)
+ha-philipsjs>=3,<4         # Philips (jointSPACE) driver — v1/v5 HTTP + v6 HTTPS pairing
+
+# Optional: physical volume-rocker capture in Desktop mode needs python-evdev.
+# It builds a small C extension (needs gcc + kernel headers), so it is NOT
+# installed by default. Enable "Capture volume rocker" in Settings, then:
+#     ./.venv/bin/pip install evdev

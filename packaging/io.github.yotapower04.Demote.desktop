@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Demote
+GenericName=TV Remote
+Comment=Universal TV and streamer remote for the Steam Deck and Linux desktop
+Exec=demote
+Icon=io.github.yotapower04.Demote
+Terminal=false
+Categories=AudioVideo;
+Keywords=TV;remote;Samsung;Roku;Vizio;LG;webOS;Android TV;Google TV;DLNA;cast;Steam Deck;
+StartupNotify=true
+StartupWMClass=io.github.yotapower04.Demote

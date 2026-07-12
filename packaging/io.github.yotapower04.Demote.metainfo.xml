@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.yotapower04.Demote</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <name>Demote</name>
+  <summary>Universal TV and streamer remote for the Steam Deck</summary>
+
+  <description>
+    <p>
+      Demote turns your Steam Deck (or any Linux desktop) into a universal remote
+      for the TVs and streaming boxes on your network. It discovers your devices,
+      pairs with them, and gives you a big touch-friendly remote that you can also
+      drive with the Deck's gamepad.
+    </p>
+    <p>Supported devices:</p>
+    <ul>
+      <li>Samsung Tizen smart TVs</li>
+      <li>Roku players and Roku TVs (TCL, Hisense, onn…)</li>
+      <li>Vizio SmartCast TVs</li>
+      <li>LG webOS smart TVs</li>
+      <li>Android TV / Google TV (Sony, Nvidia Shield, Chromecast with Google TV…)</li>
+      <li>Generic DLNA / UPnP media renderers (cast video files and URLs)</li>
+    </ul>
+    <p>
+      The on-screen buttons adapt to whatever the selected device actually
+      supports, and mapped controls show a small Steam Deck input hint. When
+      focused, Demote grabs the gamepad exclusively so a game in the background
+      never sees the presses.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">io.github.yotapower04.Demote.desktop</launchable>
+
+  <categories>
+    <category>AudioVideo</category>
+  </categories>
+
+  <keywords>
+    <keyword>TV</keyword>
+    <keyword>remote</keyword>
+    <keyword>Samsung</keyword>
+    <keyword>Roku</keyword>
+    <keyword>Vizio</keyword>
+    <keyword>LG</keyword>
+    <keyword>Android TV</keyword>
+    <keyword>DLNA</keyword>
+    <keyword>Steam Deck</keyword>
+  </keywords>
+
+  <!-- Replace these with real hosted screenshots before the Flathub PR. -->
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/YotaPower04/demote/main/docs/screenshots/deck-landscape.png</image>
+      <caption>The big-touch layout on the Steam Deck</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/YotaPower04/demote/main/docs/screenshots/desktop-portrait.png</image>
+      <caption>The windowed layout on the desktop</caption>
+    </screenshot>
+  </screenshots>
+
+  <url type="homepage">https://github.com/YotaPower04/demote</url>
+  <url type="bugtracker">https://github.com/YotaPower04/demote/issues</url>
+
+  <developer id="io.github.yotapower04">
+    <name>The Demote contributors</name>
+  </developer>
+
+  <content_rating type="oars-1.1"/>
+
+  <releases>
+    <release version="1.0.0" date="2026-07-11">
+      <description>
+        <p>First release: Samsung, Roku, Vizio, LG webOS, Android TV and DLNA
+        support, a first-run setup wizard, capability-aware UI, and Steam Deck
+        gamepad control.</p>
+      </description>
+    </release>
+  </releases>
+</component>

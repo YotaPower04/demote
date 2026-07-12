@@ -1,0 +1,16 @@
+[project]
+name = "demote"
+version = "1.0.0"
+description = "Universal TV and streamer remote for the Steam Deck and Linux desktop"
+requires-python = ">=3.11"
+license = "GPL-3.0-or-later"
+readme = "README.md"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+# Default lint set (E4/E7/E9 + F): real errors, not unverifiable style noise.
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
