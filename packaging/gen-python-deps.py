@@ -7,8 +7,8 @@ Flathub builds run offline, so every Python dependency must be listed as a
   1. resolves the full dependency closure of requirements.txt with pip (getting
      exact versions), then
   2. asks the PyPI JSON API for each package==version's wheel that matches the
-     *target runtime's* Python tag (default cp312 for org.kde.Platform 6.8, which
-     is built on freedesktop-sdk 24.08 / CPython 3.12), preferring an abi3 or
+     *target runtime's* Python tag (default cp313 for org.kde.Platform 6.11, which
+     is built on freedesktop-sdk 25.08 / CPython 3.13), preferring an abi3 or
      pure-python wheel when there is no version-specific one, and
   3. writes a flatpak-builder module that pip-installs them with `--no-index`.
 
@@ -72,8 +72,8 @@ def pick_wheel(pkg: str, version: str, pytag: str) -> tuple[str, str, str]:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--pytag", default="cp312",
-                    help="CPython tag of the target runtime (KDE 6.8 -> cp312)")
+    ap.add_argument("--pytag", default="cp313",
+                    help="CPython tag of the target runtime (KDE 6.11 -> cp313)")
     ap.add_argument("--out", default=str(ROOT / "packaging" / "python3-deps.yaml"))
     ap.add_argument("--reqs", default=str(ROOT / "requirements.txt"))
     args = ap.parse_args()

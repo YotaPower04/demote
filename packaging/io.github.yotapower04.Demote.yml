@@ -49,10 +49,12 @@ modules:
       - install -Dm644 packaging/icon.svg
         ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/io.github.yotapower04.Demote.svg
     sources:
-      # Flathub: pin to a released tag/commit.
+      # Local build: clone the committed working tree (tracked files only, so no
+      # .venv / caches). For the Flathub PR, replace with the published tag:
       #   - type: git
       #     url: https://github.com/YotaPower04/demote.git
       #     tag: v1.0.0
-      # Local testing: build straight from the working tree.
-      - type: dir
+      #     commit: <sha>
+      - type: git
         path: ..
+        branch: main
